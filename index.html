@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="css/index.css" type="text/css">
+    <link rel = "stylesheet" href="css/app.css" type="text/css">
+    <title> HERRAMIENTA DE OBSERVACIÓN </title>
+</head>
+<body>
+    <div id = "home" class="container">
+        <h1> OBSERVATION TOOL </h1>
+        <div class="container">
+            <h2>SELECT OBSERVATION TYPE</h2>
+            <ul class="sessionList">
+            </ul>
+        </div>
+        <div class="btn-container">
+            <button id = "createSession" class="btn"> NEW SESSION</button><br>
+            <button id = "borrar-sesiones" class="btn">Borrar sesiones</button><br>
+            <button id = "MOMENTARY TIME SAMPLE" class="btn"> MOMENTARY TIME SAMPLE</button>
+        </div>
+    </div>
+    <div class="form-container">
+        <form id = "session-form">
+            <div class="form-section">
+                <label for="name">Nombre<span class="required">*</span></label>
+                <input id = "name" type="text" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-section">
+                <label for="sessionLength">Duracion (Minutos)<span class="required">*</span></label>
+                <input id = "sessionLength" placeholder="Duracion" type="number" min="1">
+            </div>
+
+            <div class="form-section">
+                <label for="intervalLengthSec">Intervalos (segundos)<span class="required">*</span></label>
+                <input id = "intervalLengthSec" placeholder="Intervalos" type="number" min="1">
+            </div>
+
+            <div class="form-section">
+                <label for="intervalRandom"><input id = "intervalRandom" type="checkbox">Intervalos variables</label>
+                <input id = "variableSeconds" value = 10 placeholder="Variable hasta (segundos)">
+            </div>
+
+            <div class="form-section">
+                <label for="beep"><input id = "beep" type = "checkbox" checked>Beep</label>
+            </div>
+            
+            <div class="form-section">
+                <label for="flash"><input id = "flash" type="checkbox">Flash</label>
+            </div>
+
+            <div class="form-section">
+                <div class="input-text">
+                    <label for="subjects">Sujetos</label>
+                    <input id = "subjects" type="text" placeholder = "John Doe" required>
+                    <button id = "addSubj" type = "button">+</button>
+                </div>
+                <div id="subj-container"></div>
+            </div>
+            
+            <div class="form-section"></div>
+            <div class="input-text">
+                <label for="categories">Categorias</label>
+                <input id = "categories" type="text" placeholder = "Categoria" required>
+                <button id = "addCat" type = "button" >+</button>
+            </div>
+            <div id="cat-container"></div>
+        </form>
+        <div class="btn-container form-buttons">
+            <button id = "submitSession" class="btn" type = "submit">Aceptar</button>
+            <button id = "cancelSession" class="btn" type = "button">Cancelar</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src = "lib/jquery.js"></script>
+    <script src = "js/index.js"></script>
+
+</body>
+</html>

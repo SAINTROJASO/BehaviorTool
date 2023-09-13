@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/app.css" type = "text/css">
+    <link rel="stylesheet" href="../css/observation.css" type = "text/css">
+</head>
+<body onload="init()">
+    <div class = "container">
+        <h1 data-bind = "text : sessionName"></h1>
+        <div class="table-container">
+            <table id = "categories-table" >
+                <tr class="headers" data-bind="foreach: Object.keys(subjectArray)">
+                    <th data-bind="text : $data"></th>
+                </tr>
+                <tr class = "categories-row" data-bind="foreach: Object.keys(subjectArray)">
+                    <td data-bind="foreach: Object.keys(subjectArray[$data])">
+                        <button class="categories-btn button-28"
+                            data-bind="text : $data + ' ' + subjectArray[$parent][$data], click : function(data, event) { categoryClick($parent, data, $element) }">
+                        </button><br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="cronometer-container">
+            <h3 class="data-chronometer" id = "interval" data-bind="text : timerInterval">00:00:00</h3>
+            <h3 class="data-chronometer" id = "session-length" data-bind="text : timerSession">00:00:00</h3>
+            <!-- <button id="play">play</button> -->
+            <button id="play" class="chronometer-btn"><img src="../img/play.png"></img></button>
+            <button id="pause" class="chronometer-btn"><img src="../img/pause.png"></img></button>
+            <button id="reset" class="chronometer-btn"><img src="../img/reset.png"></img></button>
+            <!-- <button id="pause">pause</button>
+            <button id="reset">reset</button> -->
+        </div>
+        <div class="btn-container">
+            <div>
+                <button class="btn options" data-bind="click : guardar">Guardar</button><br>
+                <button class="btn options" data-bind="click : cancelar">Cancelar</button><br>
+            </div>
+            <button id = "convertirExcel"  class="btn options" data-bind="click : function(data, event) { guardarExcel('categories-table') }">Convertir a excel</button>
+        </div>
+    </div>
+    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.19.1/package/dist/xlsx.full.min.js"></script>
+    <script src = "../lib/jquery.js"></script>
+    <script src = "../lib/knockout.js"></script>
+    <script src = "../js/observation.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+label{
+  /*Color de los títulos del botón nueva sesión */
+  color: #ffffff;
+  font-size: 20px;
+}
+
+#variableSeconds{
+  display: none;
+}
+
+#createSession, #submitSession{
+  background-color: #fffcbc;
+}#createSession:hover, #submitSession:hover{
+  color: #0e819e;
+}
+
+#borrar-sesiones, #cancelSession{
+  background-color: #fffcbc;
+}#borrar-sesiones:hover, #cancelSession:hover{
+  color: #910050;
+}
+
+#intervalRandom, #beep, #flash{
+  width: fit-content;
+}
+
+#session-form{
+  /* Color del fondo del botón inicio de sesión */
+  background-color: #55ad99;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: fit-content;
+  padding-bottom:30px;
+  border-radius: 10%;
+  overflow-y: scroll;
+}
+
+.required{
+  color: #910050;
+}
+
+.form-section{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.input-text{
+  position: relative;
+}
+
+.input-text button{
+  position:absolute;
+  right: 0%;
+  transform: translate(0%, -100%);
+  border: none;
+  background-color: #397265;
+  cursor: pointer;
+  color: #fffcbc;
+  font-size: 20px;
+  border-radius: 30%;
+} .input-text button:hover{
+  background-color: #418172;  
+}
+
+.form-container{
+  align-items: center;
+  height: 90vh;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+} .form-container form{
+  width: 40vw;
+} .form-container input{
+  width: 100%;
+}
+
+.sessionList {
+  padding-inline-start: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}.sessionList li {
+  left: 0;
+  border: 1px solid #ddd;
+  margin-top: 1px;
+  background-color: #cd0170;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fffcbc;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}.sessionList li:hover {
+  background-color: #910050;
+}
+ 
+.session-name{
+  position: relative;
+  width: 95%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 1%;
+}
+
+.delete-ses {
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  right: 0%;
+  width: 5%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  transform: translate(0%, -50%);
+}.delete-ses:hover {
+  background: #680039;
+}
+
+.form-buttons{
+  bottom: 5%;
+}
+
+.swal-modal {
+  background-color: #910050;
+  border: 1px solid #fffcbc;
+}
+.swal-title{
+  color: #fffcbc;
+  font-size: 20px;
+}
+.swal-footer{
+  text-align: center;
+}
+.swal-button {
+  color: #fffcbc;
+  padding: 7px 19px;
+  border-radius: 2px;
+  border-color: #fffcbc;
+  background-color: #72003d;
+  font-size: 16px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
